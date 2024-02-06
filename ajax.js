@@ -2,7 +2,7 @@ $(document).ready(function(){
     $('#link').click(function(){
         
         const link = $('#link').val();
-        const endpoint=`https://api.github.com/users/ogiansouza`;
+        const endpoint=`https://api.github.com/users/N4T41i4`;
         fetch(endpoint)
         .then(function(resposta){
             return resposta.json();
