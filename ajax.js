@@ -10,13 +10,17 @@ $(document).ready(function(){
         .then(function(json){ 
             avatar.src=json.avatar_url;
             meunome.innerText=json.name;
-         
-         
             username.innerText=json.login;
             seguidores.innerText=json.following;
             seguindo.innerText=json.followers;
             repositorio.innerText = json.public_repos;
             link.href=json.html_url;
+        })
+        .catch(function(erro){
+            alert("Ocorreu um erro ao buscar o endereço")
+        })
+        .finally(function(){
+            console.log("fim")
         })
 
 
